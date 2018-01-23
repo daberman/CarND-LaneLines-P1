@@ -37,7 +37,7 @@ The original draw_lines function drew all the Hough lines. Instead, I wanted to 
 	1. Discard any that were not steep enough to be considered lanes 
 	1. Categorize the remaining lines into either left or right depending on if they had negative or positive slope respectively
 1.  Draw a line from the bottom of the image to the top of the region of interest for each lane
-	1. Determine **m** and **b** for y = mx + b for both the lane
+	1. Determine **m** and **b** for y = mx + b for the lane
 	1. Average all the lines for the lane to determine **m**
 	1. Average all the line endpoints for the lane to get an average **x** and **y**
 	1. Use the calculated **m**, **x**, and **y** to calculate **b**
@@ -50,7 +50,7 @@ The two lines created by calling this function once each on the sets of lines ca
 
 There were a few additional changes that I had to make. 
 
-* In order to know what the top of my region of interest was, I had to add a parameter to the hough\_lines() function and draw\_lines() functions to pass that value in.\
+* In order to know what the top of my region of interest was, I had to add a parameter to the hough\_lines() function and draw\_lines() functions to pass that value in.
 * I changed the default value for the draw\_lines() thickness parameter (as that was the value being used) to be 10 so that the lines drawn were approximately the width of the lanes in the image
 
 
